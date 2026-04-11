@@ -1,12 +1,15 @@
 import os
 
+import json
+
 from google.cloud import storage # cliente storage
 
 # 1. apuntar la llave JSON descargada
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credenciales_arquitectura.json"
 
 # 2. ID del proyecto
-PROJECT_ID = "proyectosarquitecturabsg"
+with open("credenciales_arquitectura.json", "r") as archivo_json:
+    PROJECT_ID = json.load(archivo_json)["project_id"]
 
 print("Prueba de entorno local.")
 
