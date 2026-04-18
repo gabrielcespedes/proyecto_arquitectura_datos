@@ -4,7 +4,7 @@ import csv
 import re
 from datetime import datetime, timezone
 import apache_beam as beam
-from apache_beam.options.pipeline_options import PipelineOptions
+from apache_beam.options.pipeline_options import PipelineOptions # pip install apache-beam[gcp] 
 
 # ==========================================
 # 1. CONFIGURACIÓN
