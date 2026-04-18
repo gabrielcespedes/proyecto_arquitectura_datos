@@ -8,7 +8,9 @@ from google.cloud import pubsub_v1 # pip install google-cloud-pubsub
 # ==========================================
 # 1. CONFIGURACIÓN DINÁMICA Y AUTENTICACIÓN
 # ==========================================
-RUTA_CREDENCIALES = "credenciales_arquitectura.json"
+RUTA_CREDENCIALES = "../../config/credenciales_arquitectura.json"
+ARCHIVO_CSV = "../../data/predictive_maintenance.csv"
+
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = RUTA_CREDENCIALES
 
 try:
@@ -23,7 +25,6 @@ except FileNotFoundError:
 # ==========================================
 # El ID del Tema (Topic)
 TOPIC_ID = "datos_streaming_bsg" 
-ARCHIVO_CSV = "data/predictive_maintenance.csv"
 
 # ==========================================
 # 3. LÓGICA DEL PRODUCTOR (EMISIÓN EN VIVO)

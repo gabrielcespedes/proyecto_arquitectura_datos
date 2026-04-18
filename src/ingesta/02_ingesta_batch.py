@@ -5,7 +5,8 @@ from google.cloud import storage
 # ==========================================
 # 1. CONFIGURACIÓN DINÁMICA Y AUTENTICACIÓN
 # ==========================================
-RUTA_CREDENCIALES = "credenciales_arquitectura.json"
+RUTA_CREDENCIALES = "../../config/credenciales_arquitectura.json"
+ARCHIVO_LOCAL = "../../data/predictive_maintenance.csv"
 
 # Apuntar la variable de entorno para GCP
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = RUTA_CREDENCIALES
@@ -25,7 +26,6 @@ except FileNotFoundError:
 # ==========================================
 # IMPORTANTE: Reemplace esto por el nombre único del bucket que creó en la consola
 NOMBRE_BUCKET = "data_lake_bsg_2026" 
-ARCHIVO_LOCAL = "data/predictive_maintenance.csv"
 RUTA_DESTINO_NUBE = "datos_crudos/mantenimiento_historico.csv"
 
 # ==========================================

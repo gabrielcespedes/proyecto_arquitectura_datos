@@ -1,14 +1,15 @@
 import os
-
 import json
-
 from google.cloud import storage # cliente storage
 
+RUTA_CREDENCIALES = "../../config/credenciales_arquitectura.json"
+RUTA_CSV = "../../data/predictive_maintenance.csv"
+
 # 1. apuntar la llave JSON descargada
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credenciales_arquitectura.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = RUTA_CREDENCIALES
 
 # 2. ID del proyecto
-with open("credenciales_arquitectura.json", "r") as archivo_json:
+with open(RUTA_CREDENCIALES, "r") as archivo_json:
     PROJECT_ID = json.load(archivo_json)["project_id"]
 
 print("Prueba de entorno local.")
