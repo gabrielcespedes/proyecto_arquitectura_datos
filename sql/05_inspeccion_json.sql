@@ -1,0 +1,1 @@
+SELECT data FROM `proyectosarquitecturabsg.dataset_streaming.sensores_tiempo_real_raw_latest` LIMIT 5;
